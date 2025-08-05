@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.StackPane?>
+
+
+<VBox spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimaryController">
+
+   <HBox>
+      <MenuBar>
+         <menus>
+            <Menu text="Fichier">
+               <items>
+                  <MenuItem text="Sauvegarder perspective" onAction="#savePerspective" disable="true"/>
+                  <MenuItem text="Charger perspective" onAction="#loadPerspective" disable="true"/>
+                  <SeparatorMenuItem/>
+                  <MenuItem text="Charger Image" onAction="#loadImage"/>
+                  <SeparatorMenuItem/>
+                  <MenuItem text="Quitter" onAction="#quit"/>
+               </items>
+            </Menu>
+            <Menu text="Édition">
+               <items>
+                  <MenuItem text="Défaire" onAction="#undo"/>
+                  <MenuItem text="Refaire" onAction="#redo"/>
+               </items>
+            </Menu>
+            <Menu text="Presse-Papier">
+               <items>
+                  <MenuItem text="Choisir stratégie" onAction="#chooseStrategy"/>
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </HBox>
+   <HBox prefHeight="500" style="-fx-border-color: black; -fx-border-width: 2;">
+   <StackPane HBox.hgrow="ALWAYS" style="-fx-border-color: grey; -fx-border-width: 4;">
+      <ImageView fx:id="imageView" fitWidth="200.0" fitHeight="500.0" preserveRatio="true" smooth="true" cache="true">
+         <image>
+            <Image url="@test.jpg"/>
+         </image>
+      </ImageView>
+   </StackPane>
+   <StackPane HBox.hgrow="ALWAYS" style="-fx-border-color: red; -fx-border-width: 4;">
+      <ImageView fx:id="imagePerspective1" fitWidth="200.0" fitHeight="500.0" preserveRatio="true" smooth="true" cache="true">
+         <image>
+            <Image url="@test.jpg"/>
+         </image>
+      </ImageView>
+   </StackPane>
+   <StackPane HBox.hgrow="ALWAYS" style="-fx-border-color: red; -fx-border-width: 4;">
+      <ImageView fx:id="imagePerspective2" fitWidth="200.0" fitHeight="500.0" preserveRatio="true" smooth="true" cache="true">
+         <image>
+            <Image url="@test.jpg"/>
+         </image>
+      </ImageView>
+   </StackPane>
+   </HBox>
+   <HBox alignment="CENTER" style="-fx-font-weight: bold;">
+      <Text text="Maxim Tchapalo, Francis Beaulieu-Ménard, Vladyslav Lukyanov, 2025" />
+   </HBox>
+</VBox>
