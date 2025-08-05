@@ -13,21 +13,19 @@ public class Perspective extends Observable {
         notifyObservers();
     }
 
+
+
+    public void setOffset(int offsetX, int offsetY) {
+        this.offsetX = offsetX;
+        this.offsetY = offsetY;
+        notifyObservers();
+    }
+
     public int getOffsetX() {
         return offsetX;
     }
 
-    public void setOffsetX(int offsetX) {
-        this.offsetX = offsetX;
-        notifyObservers();
-    }
-
     public int getOffsetY() {
         return offsetY;
-    }
-
-    public void setOffsetY(int offsetY) {
-        this.offsetY = offsetY;
-        notifyObservers();
     }
 }

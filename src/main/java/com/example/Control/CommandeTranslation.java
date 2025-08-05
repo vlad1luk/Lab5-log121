@@ -6,6 +6,14 @@ public class CommandeTranslation implements Commande{
     private Perspective perspective;
     private int oldX, oldY, newX, newY;
 
+    public CommandeTranslation(Perspective perspective, int newX, int newY) {
+        this.perspective = perspective;
+        this.oldX = perspective.getOffsetX();
+        this.oldY = perspective.getOffsetY();
+        this.newX = newX;
+        this.newY = newY;
+    }
+
     public void setPerspective(Perspective perspective) {
         this.perspective = perspective;
     }
@@ -28,15 +36,11 @@ public class CommandeTranslation implements Commande{
 
     @Override
     public void executer() {
-        oldX = perspective.getOffsetX();
-        oldY = perspective.getOffsetY();
-        perspective.setOffsetX(newX);
-        perspective.setOffsetY(newY);
+        perspective.setOffset(newX,newY);
     }
 
     @Override
     public void annuler() {
-        perspective.setOffsetX(oldX);
-        perspective.setOffsetY(oldY);
+        perspective.setOffset(oldX,oldY);
     }
 }

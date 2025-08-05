@@ -2,12 +2,13 @@ package com.example.Control;
 
 import com.example.View.View;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
 
 public class GestionnaireCommandes {
     private static GestionnaireCommandes instance = null;
-    private Map<View, Stack<Commande>> pileVue;
+    private Map<View, Stack<Commande>> pileVue = new HashMap<>();
 
     private GestionnaireCommandes(){}
 
@@ -19,10 +20,17 @@ public class GestionnaireCommandes {
     }
 
     public void executerCommande(Commande commande, View view){
-        //TODO
+        commande.executer();
+        pileVue.putIfAbsent(view, new Stack<>());
+        pileVue.get(view).push(commande);
     }
 
-    public void defaire(View vue){
-        //TODO
+    public void undo(View view){
+        Stack<Commande> commandes = pileVue.get(view);
+        if(commandes != null && !commandes.isEmpty()){
+            Commande last = commandes.pop();
+            last.annuler();
+        }
+
     }
 }

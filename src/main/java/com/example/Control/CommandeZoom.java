@@ -6,6 +6,12 @@ public class CommandeZoom implements Commande{
     private Perspective perspective;
     private double oldZoom, newZoom;
 
+    public CommandeZoom(Perspective perspective, double newZoom) {
+        this.perspective = perspective;
+        this.oldZoom = perspective.getZoom();
+        this.newZoom = newZoom;
+    }
+
     public void setPerspective(Perspective perspective) {
         this.perspective = perspective;
     }
@@ -20,7 +26,6 @@ public class CommandeZoom implements Commande{
 
     @Override
     public void executer() {
-        oldZoom = perspective.getZoom();
         perspective.setZoom(newZoom);
     }
 
