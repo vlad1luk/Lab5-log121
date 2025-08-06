@@ -110,11 +110,7 @@ public class PrimaryController {
             @Override
             public void update() {
                 double containerWidth = ((javafx.scene.layout.Region)imagePerspective2.getParent()).getWidth();
-                double containerHeight = ((javafx.scene.layout.Region)imagePerspective2.getParent()).getHeight();
-                
-                System.out.println("Perspective2 update - Container: " + containerWidth + "x" + containerHeight);
-                System.out.println("Perspective2 update - Zoom: " + perspective2.getZoom() + ", Offset: " + perspective2.getOffsetX() + "," + perspective2.getOffsetY());
-                
+                double containerHeight = ((javafx.scene.layout.Region)imagePerspective2.getParent()).getHeight();                
                 imagePerspective2.setFitWidth(containerWidth);
                 imagePerspective2.setFitHeight(containerHeight);
                 

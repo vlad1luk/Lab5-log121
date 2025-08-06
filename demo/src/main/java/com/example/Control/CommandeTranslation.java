@@ -21,7 +21,7 @@ public class CommandeTranslation implements Commande {
     }
 
     @Override
-    public void annuler() {
+    public void annuler() { 
         perspective.setOffset(ancienOffsetX, ancienOffsetY);
     }
 } 
