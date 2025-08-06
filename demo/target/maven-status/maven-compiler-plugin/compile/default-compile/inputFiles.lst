@@ -1,3 +1,15 @@
+/Users/vladlukyanov/Documents/GitHub/Lab5-log121/demo/src/main/java/com/example/Model/Observable.java
+/Users/vladlukyanov/Documents/GitHub/Lab5-log121/demo/src/main/java/com/example/View/PrimaryView.java
+/Users/vladlukyanov/Documents/GitHub/Lab5-log121/demo/src/main/java/com/example/Model/Perspective.java
+/Users/vladlukyanov/Documents/GitHub/Lab5-log121/demo/src/main/java/com/example/View/View.java
+/Users/vladlukyanov/Documents/GitHub/Lab5-log121/demo/src/main/java/com/example/View/Observer.java
+/Users/vladlukyanov/Documents/GitHub/Lab5-log121/demo/src/main/java/com/example/Model/ImageModel.java
+/Users/vladlukyanov/Documents/GitHub/Lab5-log121/demo/src/main/java/com/example/Control/GestionnaireCommandes.java
+/Users/vladlukyanov/Documents/GitHub/Lab5-log121/demo/src/main/java/com/example/View/ThirdView.java
+/Users/vladlukyanov/Documents/GitHub/Lab5-log121/demo/src/main/java/com/example/Control/Commande.java
 /Users/vladlukyanov/Documents/GitHub/Lab5-log121/demo/src/main/java/com/example/App.java
+/Users/vladlukyanov/Documents/GitHub/Lab5-log121/demo/src/main/java/com/example/Control/CommandeCopyPaste.java
+/Users/vladlukyanov/Documents/GitHub/Lab5-log121/demo/src/main/java/com/example/View/SecondaryView.java
+/Users/vladlukyanov/Documents/GitHub/Lab5-log121/demo/src/main/java/com/example/Control/CommandeTranslation.java
 /Users/vladlukyanov/Documents/GitHub/Lab5-log121/demo/src/main/java/com/example/PrimaryController.java
-/Users/vladlukyanov/Documents/GitHub/Lab5-log121/demo/src/main/java/module-info.java
+/Users/vladlukyanov/Documents/GitHub/Lab5-log121/demo/src/main/java/com/example/Control/CommandeZoom.java

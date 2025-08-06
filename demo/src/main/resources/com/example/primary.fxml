@@ -11,6 +11,8 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.shape.Rectangle?>
 
 
 <VBox spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimaryController">
@@ -43,27 +45,71 @@
       </MenuBar>
    </HBox>
    <HBox prefHeight="500" style="-fx-border-color: black; -fx-border-width: 2;">
-   <StackPane HBox.hgrow="ALWAYS" style="-fx-border-color: grey; -fx-border-width: 4;">
-      <ImageView fx:id="imageView" fitWidth="200.0" fitHeight="500.0" preserveRatio="true" smooth="true" cache="true">
-         <image>
-            <Image url="@test.jpg"/>
-         </image>
-      </ImageView>
-   </StackPane>
-   <StackPane HBox.hgrow="ALWAYS" style="-fx-border-color: red; -fx-border-width: 4;">
-      <ImageView fx:id="imagePerspective1" fitWidth="200.0" fitHeight="500.0" preserveRatio="true" smooth="true" cache="true">
-         <image>
-            <Image url="@test.jpg"/>
-         </image>
-      </ImageView>
-   </StackPane>
-   <StackPane HBox.hgrow="ALWAYS" style="-fx-border-color: red; -fx-border-width: 4;">
-      <ImageView fx:id="imagePerspective2" fitWidth="200.0" fitHeight="500.0" preserveRatio="true" smooth="true" cache="true">
-         <image>
-            <Image url="@test.jpg"/>
-         </image>
-      </ImageView>
-   </StackPane>
+   <!-- Vue principale (non modifiable) -->
+   <VBox HBox.hgrow="ALWAYS" style="-fx-border-color: grey; -fx-border-width: 4;">
+      <StackPane VBox.vgrow="ALWAYS">
+         <ImageView fx:id="imageView" fitWidth="200.0" fitHeight="500.0" preserveRatio="true" smooth="true" cache="true"/>
+      </StackPane>
+      <HBox alignment="CENTER" style="-fx-padding: 5;">
+         <Text text="Vue Principale (Non modifiable)" style="-fx-font-weight: bold;"/>
+      </HBox>
+   </VBox>
+   
+       <!-- Vue modifiable 1 (perspective1) -->
+    <VBox HBox.hgrow="ALWAYS" style="-fx-border-color: red; -fx-border-width: 4;">
+       <StackPane VBox.vgrow="ALWAYS">
+          <ImageView fx:id="imagePerspective1" preserveRatio="false" smooth="true" cache="true">
+             <clip>
+                <Rectangle width="200.0" height="400.0"/>
+             </clip>
+          </ImageView>
+       </StackPane>
+       <HBox alignment="CENTER" spacing="5" style="-fx-padding: 5;">
+          <Text text="Vue 1" style="-fx-font-weight: bold;"/>
+       </HBox>
+       <HBox alignment="CENTER" spacing="2" style="-fx-padding: 2;">
+          <Button text="Zoom +" onAction="#zoomIn1" style="-fx-font-size: 10;"/>
+          <Button text="Zoom -" onAction="#zoomOut1" style="-fx-font-size: 10;"/>
+       </HBox>
+               <HBox alignment="CENTER" spacing="2" style="-fx-padding: 2;">
+           <Button text="↑" onAction="#translateUp1" style="-fx-font-size: 10;"/>
+           <Button text="↓" onAction="#translateDown1" style="-fx-font-size: 10;"/>
+           <Button text="←" onAction="#translateLeft1" style="-fx-font-size: 10;"/>
+           <Button text="→" onAction="#translateRight1" style="-fx-font-size: 10;"/>
+        </HBox>
+        <HBox alignment="CENTER" spacing="2" style="-fx-padding: 2;">
+           <Button text="Copier" onAction="#copyPerspective1" style="-fx-font-size: 10;"/>
+           <Button text="Coller" onAction="#pasteToPerspective1" style="-fx-font-size: 10;"/>
+        </HBox>
+    </VBox>
+   
+       <!-- Vue modifiable 2 (perspective2) -->
+    <VBox HBox.hgrow="ALWAYS" style="-fx-border-color: blue; -fx-border-width: 4;">
+       <StackPane VBox.vgrow="ALWAYS">
+          <ImageView fx:id="imagePerspective2" preserveRatio="false" smooth="true" cache="true">
+             <clip>
+                <Rectangle width="200.0" height="400.0"/>
+             </clip>
+          </ImageView>
+       </StackPane>
+       <HBox alignment="CENTER" spacing="5" style="-fx-padding: 5;">
+          <Text text="Vue 2" style="-fx-font-weight: bold;"/>
+       </HBox>
+       <HBox alignment="CENTER" spacing="2" style="-fx-padding: 2;">
+          <Button text="Zoom +" onAction="#zoomIn2" style="-fx-font-size: 10;"/>
+          <Button text="Zoom -" onAction="#zoomOut2" style="-fx-font-size: 10;"/>
+       </HBox>
+               <HBox alignment="CENTER" spacing="2" style="-fx-padding: 2;">
+           <Button text="↑" onAction="#translateUp2" style="-fx-font-size: 10;"/>
+           <Button text="↓" onAction="#translateDown2" style="-fx-font-size: 10;"/>
+           <Button text="←" onAction="#translateLeft2" style="-fx-font-size: 10;"/>
+           <Button text="→" onAction="#translateRight2" style="-fx-font-size: 10;"/>
+        </HBox>
+        <HBox alignment="CENTER" spacing="2" style="-fx-padding: 2;">
+           <Button text="Copier" onAction="#copyPerspective2" style="-fx-font-size: 10;"/>
+           <Button text="Coller" onAction="#pasteToPerspective2" style="-fx-font-size: 10;"/>
+        </HBox>
+    </VBox>
    </HBox>
    <HBox alignment="CENTER" style="-fx-font-weight: bold;">
       <Text text="Maxim Tchapalo, Francis Beaulieu-Ménard, Vladyslav Lukyanov, 2025" />
