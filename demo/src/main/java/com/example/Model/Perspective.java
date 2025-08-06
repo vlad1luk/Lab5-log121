@@ -9,7 +9,7 @@ public class Perspective extends Observable {
     }
 
     public void setZoom(double zoom) {
-        this.zoom = Math.max(0.1, Math.min(5.0, zoom));
+        this.zoom = Math.max(0.1, Math.min(3.0, zoom));
         notifyObservers();
     }
 

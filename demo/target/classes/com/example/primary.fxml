@@ -55,12 +55,11 @@
       </HBox>
    </VBox>
    
-       <!-- Vue modifiable 1 (perspective1) -->
     <VBox HBox.hgrow="ALWAYS" style="-fx-border-color: red; -fx-border-width: 4;">
        <StackPane VBox.vgrow="ALWAYS">
           <ImageView fx:id="imagePerspective1" preserveRatio="false" smooth="true" cache="true">
              <clip>
-                <Rectangle width="200.0" height="400.0"/>
+                <Rectangle/>
              </clip>
           </ImageView>
        </StackPane>
@@ -83,12 +82,11 @@
         </HBox>
     </VBox>
    
-       <!-- Vue modifiable 2 (perspective2) -->
     <VBox HBox.hgrow="ALWAYS" style="-fx-border-color: blue; -fx-border-width: 4;">
        <StackPane VBox.vgrow="ALWAYS">
           <ImageView fx:id="imagePerspective2" preserveRatio="false" smooth="true" cache="true">
              <clip>
-                <Rectangle width="200.0" height="400.0"/>
+                <Rectangle/>
              </clip>
           </ImageView>
        </StackPane>

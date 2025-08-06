@@ -3,9 +3,9 @@ package com.example;
 import java.io.File;
 import java.util.Optional;
 
+import com.example.Control.CommandeCopyPaste;
 import com.example.Control.CommandeTranslation;
 import com.example.Control.CommandeZoom;
-import com.example.Control.CommandeCopyPaste;
 import com.example.Control.GestionnaireCommandes;
 import com.example.Model.ImageModel;
 import com.example.Model.Perspective;
@@ -112,6 +112,9 @@ public class PrimaryController {
                 double containerWidth = ((javafx.scene.layout.Region)imagePerspective2.getParent()).getWidth();
                 double containerHeight = ((javafx.scene.layout.Region)imagePerspective2.getParent()).getHeight();
                 
+                System.out.println("Perspective2 update - Container: " + containerWidth + "x" + containerHeight);
+                System.out.println("Perspective2 update - Zoom: " + perspective2.getZoom() + ", Offset: " + perspective2.getOffsetX() + "," + perspective2.getOffsetY());
+                
                 imagePerspective2.setFitWidth(containerWidth);
                 imagePerspective2.setFitHeight(containerHeight);
                 
@@ -179,15 +182,15 @@ public class PrimaryController {
     }
     
     public void zoomIn1() {
-        double newZoom = perspective1.getZoom() * 1.2;
-        if (newZoom <= 5.0) {
+        double newZoom = perspective1.getZoom() * 1.1;
+        if (newZoom <= 3.0) {
             CommandeZoom commande = new CommandeZoom(perspective1, newZoom);
             gestionnaireCommandes.executerCommande(commande);
         }
     }
     
     public void zoomOut1() {
-        double newZoom = perspective1.getZoom() * 0.8;
+        double newZoom = perspective1.getZoom() * 0.9;
         if (newZoom >= 0.1) {
             CommandeZoom commande = new CommandeZoom(perspective1, newZoom);
             gestionnaireCommandes.executerCommande(commande);
@@ -219,15 +222,15 @@ public class PrimaryController {
     }
     
     public void zoomIn2() {
-        double newZoom = perspective2.getZoom() * 1.2;
-        if (newZoom <= 5.0) {
+        double newZoom = perspective2.getZoom() * 1.1;
+        if (newZoom <= 3.0) {
             CommandeZoom commande = new CommandeZoom(perspective2, newZoom);
             gestionnaireCommandes.executerCommande(commande);
         }
     }
     
     public void zoomOut2() {
-        double newZoom = perspective2.getZoom() * 0.8;
+        double newZoom = perspective2.getZoom() * 0.9;
         if (newZoom >= 0.1) {
             CommandeZoom commande = new CommandeZoom(perspective2, newZoom);
             gestionnaireCommandes.executerCommande(commande);

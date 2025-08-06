@@ -60,7 +60,7 @@
        <StackPane VBox.vgrow="ALWAYS">
           <ImageView fx:id="imagePerspective1" preserveRatio="false" smooth="true" cache="true">
              <clip>
-                <Rectangle width="200.0" height="400.0"/>
+                <Rectangle/>
              </clip>
           </ImageView>
        </StackPane>
@@ -88,7 +88,7 @@
        <StackPane VBox.vgrow="ALWAYS">
           <ImageView fx:id="imagePerspective2" preserveRatio="false" smooth="true" cache="true">
              <clip>
-                <Rectangle width="200.0" height="400.0"/>
+                <Rectangle/>
              </clip>
           </ImageView>
        </StackPane>
