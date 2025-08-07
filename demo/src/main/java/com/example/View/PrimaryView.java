@@ -1,3 +1,9 @@
+/**
+ * Laboratoire 5
+ * @author : Maxim Tchapalo, Francis Beaulieu-Ménard, Vladyslav Lukyanov
+ * @cours : LOG121 Conception Orientée Objet
+ */
+
 package com.example.View;
 
 import com.example.Model.ImageModel;
@@ -22,19 +28,17 @@ public class PrimaryView implements View, Observer {
         update();
     }
 
+
+    
     @Override
     public void update() {
         if (imageModel.getImage() != null) {
             javafx.application.Platform.runLater(() -> {
                 imageView.setImage(imageModel.getImage());
-                
-                // Appliquer les transformations de perspective
                 imageView.setScaleX(perspective.getZoom());
                 imageView.setScaleY(perspective.getZoom());
                 imageView.setTranslateX(perspective.getOffsetX());
                 imageView.setTranslateY(perspective.getOffsetY());
-                
-                // Forcer le rafraîchissement
                 imageView.getParent().requestLayout();
             });
         }

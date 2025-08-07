@@ -1,3 +1,9 @@
+/**
+ * Laboratoire 5
+ * @author : Maxim Tchapalo, Francis Beaulieu-Ménard, Vladyslav Lukyanov
+ * @cours : LOG121 Conception Orientée Objet
+ */
+
 package com.example.View;
 
 import com.example.Model.ImageModel;

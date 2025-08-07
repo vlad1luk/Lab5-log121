@@ -1,3 +1,10 @@
+/**
+ * Laboratoire 5
+ * @author : Maxim Tchapalo, Francis Beaulieu-Ménard, Vladyslav Lukyanov
+ * @cours : LOG121 Conception Orientée Objet
+ * Classe Observateur abstraite que fournit 2 methodes de base
+ */
+
 package com.example.Model;
 
 import java.util.ArrayList;

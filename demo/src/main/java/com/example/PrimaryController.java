@@ -1,3 +1,9 @@
+/**
+ * Laboratoire 5
+ * @authors : Maxim Tchapalo, Francis Beaulieu-Ménard, Vladyslav Lukyanov
+ * @cours : LOG121 Conception Orientée Objet
+ */
+
 package com.example;
 
 import java.io.File;
